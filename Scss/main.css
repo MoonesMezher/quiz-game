@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, Arial;
+}
+
+.quiz_app {
+  margin: 20px auto;
+  width: 800px;
+  background-color: #f8f8f8;
+  padding: 15px;
+}
+.quiz_app .quiz_info {
+  display: flex;
+  background-color: white;
+  padding: 20px;
+  justify-content: space-between;
+}
+.quiz_app .quiz_info .category span {
+  text-transform: capitalize;
+}
+.quiz_app .quiz_info.center {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.quiz_app .quiz_area {
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  text-align: center;
+}
+.quiz_app .quiz_area h2 {
+  font-size: 1.1rem;
+}
+.quiz_app .answers_area {
+  background-color: white;
+  padding: 20px;
+}
+.quiz_app .answers_area .answer {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f8f8f8;
+  margin-bottom: 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.quiz_app .answers_area .answer:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+.quiz_app .answers_area .answer:hover::before {
+  left: 0;
+}
+.quiz_app .answers_area .answer input:checked + label {
+  color: #0075ff;
+}
+.quiz_app .answers_area .answer label {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 5px;
+  text-transform: capitalize;
+  position: relative;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.quiz_app .submit_button {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #0075ff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.quiz_app .submit_button:focus {
+  outline: none;
+}
+.quiz_app .bullets {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.quiz_app .bullets .spans {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.quiz_app .bullets .spans span {
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.quiz_app .bullets .spans span.on {
+  background-color: #0075ff;
+}
+.quiz_app .bullets .count_down {
+  font-weight: bold;
+}
+.quiz_app .bullets .count_down i {
+  color: #0075ff;
+}
+.quiz_app .results {
+  text-transform: capitalize;
+  color: black;
+  margin-top: 15px;
+  text-align: center;
+}
+.quiz_app .results span {
+  font-weight: bold;
+}
+.quiz_app .results span.bad {
+  color: red;
+}
+.quiz_app .results span.good {
+  color: green;
+}
+.quiz_app .results span.perfect {
+  color: #0075ff;
+}
+.quiz_app .control {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.quiz_app .control button {
+  background-color: #0075ff;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  width: 100px;
+}
+.quiz_app .control.show {
+  display: flex;
+}/*# sourceMappingURL=main.css.map */

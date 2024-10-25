@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/normalize.css">
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <link rel="stylesheet" href="./Scss/main.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <div class="quiz_app">
+        <div class="quiz_info">
+            <div class="category">Category: <span></span></div>
+            <div class="count">Questions Count: <span></span></div>
+        </div>
+        <div class="quiz_area remove_after_finish">
+            <h2></h2>
+        </div>
+        <div class="answers_area remove_after_finish">
+            <div class="answer">
+                <input type="radio" id="answer-one" name="questions" data-name="answer_1" checked>
+                <label for="answer-one"></label>
+            </div>
+            <div class="answer">
+                <input type="radio" id="answer-two" name="questions" data-name="answer_2">
+                <label for="answer-two"></label>
+            </div>
+            <div class="answer">
+                <input type="radio" id="answer-three" name="questions" data-name="answer_3">
+                <label for="answer-three"></label>
+            </div>
+            <div class="answer">
+                <input type="radio" id="answer-four" name="questions" data-name="answer_4">
+                <label for="answer-four"></label>
+            </div>
+        </div>
+        <button class="submit_button remove_after_finish">submit answer</button>
+        <div class="bullets remove_after_finish">
+            <div class="spans">
+            </div>
+            <div class="count_down">
+                <i class="fas fa-clock"></i>
+                <span class="min"></span>:<span class="sec"></span>
+            </div>
+        </div>
+        <div class="results">
+        </div>
+        <div class="control">
+            <button class="replay">replay</button>
+            <button class="exit">exit</button>
+        </div>
+    </div>
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>

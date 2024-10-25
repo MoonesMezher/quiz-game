@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Tahoma, Arial;
+}
+.quiz_app {
+    margin: 20px auto;
+    width: 800px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    .quiz_info {
+        display: flex;
+        background-color: white;
+        padding: 20px;
+        justify-content: space-between;
+        .category {
+            span {
+                text-transform: capitalize;
+            }
+        }
+        &.center {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+    }
+    .quiz_area {
+        background-color: white;
+        padding: 20px;
+        margin-top: 15px;
+        text-align: center;
+        h2 {
+            font-size: 1.1rem;
+        }
+    }
+    .answers_area {
+        background-color: white;
+        padding: 20px;
+        .answer {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f8f8f8;
+            margin-bottom: 5px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            &:before {
+                content: "";
+                position: absolute;
+                left: -100%;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #eee;
+                z-index: -1;
+                transition: .3s ease;
+            }
+            &:hover {
+                &::before {
+                    left: 0;
+                }
+            }
+            input {
+                &:checked {
+                    + label {
+                        color: #0075ff;
+                    }
+                }
+                //accent-color: gold; => In This Code I Can Change Color Of Radio Or Box When It Is Checked
+            }
+            label {
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 14px;
+                margin-left: 5px;
+                text-transform: capitalize;
+                position: relative;
+                top: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .submit_button {
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        background-color: #0075ff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        text-transform: capitalize;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        &:focus {
+            outline: none;
+        }
+    }
+    .bullets {
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        .spans {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            span {
+                background-color: #ddd;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                &.on {
+                    background-color: #0075ff;
+                }
+            }
+        }
+        .count_down {
+            i {
+                color: #0075ff;
+            }
+            font-weight: bold;
+        }
+    }
+    .results {
+        text-transform: capitalize;
+        color: black;
+        margin-top: 15px;
+        text-align: center;
+        span {
+            font-weight: bold;
+            &.bad {
+                color: red;
+            }
+            &.good {
+                color: green;
+            }
+            &.perfect {
+                color: #0075ff;
+            }
+        }
+    }
+    .control {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 50px;
+        background-color: #f8f8f8;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        button {
+            background-color: #0075ff;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            text-transform: capitalize;
+            cursor: pointer;
+            width: 100px;
+        }
+        &.show {
+            display: flex;
+        }
+    }
+}
